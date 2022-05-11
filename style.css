@@ -54,7 +54,14 @@ h1 strong{
     font-weight: 300;
 
 }
+
+.signup-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .signup-form{
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -62,13 +69,28 @@ h1 strong{
     max-width: 282px;
 }
 .signup-field{
-    margin-top: 2rem;
     border-radius: 28px;
     border: 1px solid #C2D3FF;
     height: 2.5rem;
     width: 17.5rem;
     outline: none;
     padding-left: 2rem;
+    font-size: 0.8rem;
+    color: var(--neutral2);
+}
+
+.nl-error{
+    margin-top: 0.4rem;
+    margin-bottom: 1.25rem;
+    text-align: center;
+    color: #FF5466;
+    font-style: italic;
+    font-size: 0.65rem;
+    display: none;
+}
+
+.error-field{
+    border: 1px solid #FF5466;
 }
 
 .signup-field::placeholder{
@@ -86,8 +108,14 @@ button{
     height: 2.5rem;
     width: 17.5rem;
     font-weight: 700;
+    transition: all 0.3s;
 }
 
+
+button:hover{
+    cursor: pointer;
+    opacity: 65%;
+}
 .illustration{
     margin-top: 4.5rem;
     height: 12rem;
@@ -116,5 +144,67 @@ footer{
 
 
 @media(min-width: 750px){
+    body{
+        justify-content: center;
+    }
+    .container{
+        margin-top: 0;
+    }
 
+    .logo{
+        width: 5.625rem;
+    }
+
+    h1{
+        margin-top: 2.5rem;
+        font-size: 3rem;
+    }
+
+    .cta{
+        font-size: 1.25rem;
+        font-weight: 300;
+    }
+
+   .signup-form{
+       margin-top: 2.5rem;
+       flex-direction: row;
+       max-width: 40rem;
+       gap: 1rem;
+   }
+
+   .signup-box{
+       flex-basis: 70%;
+       align-items: flex-start;
+   }
+    .signup-field{
+        width: 100%;
+        height: 3.5rem;
+        outline: none;
+        padding-left: 2rem;
+        font-size: 1rem;
+    }
+    .nl-error{
+        font-size: 0.75rem;
+        text-align: left;
+        padding-left: 2rem;
+    }
+
+    .signup-field::placeholder{
+        font-size: 1rem;
+    }
+    button{
+        margin-top: 0;
+        height: 3.5rem;
+        flex-basis: 30%;
+        font-size: 1rem;
+    }
+
+    .illustration{
+        height: 23.75rem;
+    }
+
+    .social-box{
+        margin-top: 4.5rem;
+    }
 }
+
